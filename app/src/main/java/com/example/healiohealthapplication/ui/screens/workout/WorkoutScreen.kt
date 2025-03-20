@@ -1,4 +1,4 @@
-package com.example.healiohealthapplication.ui.screens.home
+package com.example.healiohealthapplication.ui.screens.workout
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -7,16 +7,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
 import com.example.healiohealthapplication.ui.components.BottomNavBar
-import com.example.healiohealthapplication.ui.components.HomeScreenTopNavBar
+import com.example.healiohealthapplication.ui.components.TopNavBar
 
 @Composable
-fun HomeScreen(navController: NavController, modifier: Modifier, viewModel: HomeScreenViewModel) {
+fun WorkoutScreen(navController: NavController, modifier: Modifier) {
     Scaffold(
-        topBar = { HomeScreenTopNavBar("Home", navController, viewModel.expanded, { viewModel.toggleExpanded() }) },
+        topBar = { TopNavBar("Workout", navController) },
         bottomBar = { BottomNavBar(navController) }
     ) { innerPadding ->
         Text(
-            text = "Home Screen!",
+            text = "Workout Screen!",
             modifier = Modifier.padding(innerPadding)
         )
     }
